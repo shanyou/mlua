@@ -8,4 +8,8 @@ foreach(script ${lua_script})
 endforeach(script)
 
 set(sources
+	${lua_script}
+	MLuaRefCount.cpp
 )
+
+add_library(${projname} STATIC ${sources})
