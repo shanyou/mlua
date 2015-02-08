@@ -10,6 +10,7 @@ endforeach(script)
 set(sources
 	${lua_script}
 	MLuaRefCount.cpp
+    MLuaEngine.cpp
 )
 
 add_library(${projname} STATIC ${sources})
