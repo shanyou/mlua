@@ -2,6 +2,8 @@
 #define __MLUA_COMMON_H__
 
 #include <stdint.h>
+#include <stdio.h>
+#include <stdlib.h>
 #ifndef BASETYPES
 	#define BASETYPES
 	typedef unsigned long ULONG;
@@ -50,5 +52,16 @@
 #if defined (__OSX__)
 # include <libkern/OSAtomic.h> /* OSMemoryBarrier() */
 #endif
+
+namespace MLua {
+	class IAtomicOpt
+    {
+    protected:
+        virtual ~IAtomicOpt();
+    public:
+        virtual void Enter() = 0;
+        virtual void Leave() = 0;
+    };
+}
 
 #endif //__MLUA_COMMON_H__

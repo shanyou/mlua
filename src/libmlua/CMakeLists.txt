@@ -11,6 +11,7 @@ set(sources
 	${lua_script}
 	MLuaRefCount.cpp
     MLuaEngine.cpp
+    MLuaThread.h
 )
 
 add_library(${projname} STATIC ${sources})

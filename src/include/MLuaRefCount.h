@@ -6,12 +6,6 @@
 
 namespace MLua
 {
-    class IAtomicOpt
-    {
-    public:
-        virtual void Enter() = 0;
-        virtual void Leave() = 0;
-    };
     
     class RefCount
     {
